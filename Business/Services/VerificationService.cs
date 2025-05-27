@@ -42,6 +42,7 @@ public class VerificationService(IConfiguration configuration, EmailClient email
 
             var htmlContent = $@"
             SKRIV IN HTML https://youtu.be/IM4UYx-Dab0?t=1811
+                CODE:
             {verfficationCode}
 
         ";
