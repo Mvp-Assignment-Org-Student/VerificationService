@@ -4,6 +4,7 @@ using Business.Models;
 using Microsoft.Extensions.Configuration;
 using Azure;
 using System.Diagnostics;
+using Business.Interfaces;
 
 namespace Business.Services;
 
@@ -97,13 +98,4 @@ public class VerificationService(IConfiguration configuration, EmailClient email
             Error = "Invalid or expired verification code"
         };
     }
-}
-
-public interface IVerificationService
-{
-    Task<VerificationServiceResult> SendVerificationCodeAsync(SendVerificationCodeRequest request);
-
-    void SaveVerificationCode(SaveVerificationRequest request);
-
-    VerificationServiceResult VerifyVerificationCode(VerifyVerificationCodeRequest request);
 }

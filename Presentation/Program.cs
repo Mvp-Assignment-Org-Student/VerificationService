@@ -1,4 +1,5 @@
 using Azure.Communication.Email;
+using Business.Interfaces;
 using Business.Services;
 
 var builder = WebApplication.CreateBuilder(args);
