@@ -24,7 +24,7 @@ app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
     c.RoutePrefix = string.Empty;
-    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Account Servic Api");
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "Verification Service Api");
 });
 app.MapControllers();
 
