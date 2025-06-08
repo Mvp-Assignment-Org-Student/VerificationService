@@ -42,9 +42,45 @@ public class VerificationService(IConfiguration configuration, EmailClient email
         ";
 
             var htmlContent = $@"
-            SKRIV IN HTML https://youtu.be/IM4UYx-Dab0?t=1811
-                CODE:
+            <!DOCTYPE html>
+<html lang=""en"">
+  <head>
+    <meta charset=""UTF-8"" />
+    <meta name=""viewport"" content=""width=device-width, initial-scale=1"" />
+    <title>Verifieringskod</title>
+  </head>
+  <body>
+    <div
+      style=""
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      ""
+    >
+      <div
+        style=""
+          background: white;
+          padding: 2rem;
+          border-radius: 1rem;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          max-width: 400px;
+          width: 100%;
+          text-align: center;
+        ""
+      >
+        <form style=""width: 100%"">
+          <label style=""display: block; font-size: 14px; margin-bottom: 2rem"">
+            Verifieringskod
+          </label>
+          <p style=""font-size: 1.5rem; font-weight: bold; margin: 0"">
             {verfficationCode}
+          </p>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
+
 
         ";
 
